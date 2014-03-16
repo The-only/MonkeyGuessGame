@@ -32,6 +32,7 @@
 				   而keyup事件则是在文本框已经发生变化之后被触发的。
 				   keypress不同浏览器默认反应不一样
 				   还有个问题：为什么用keypress 第四个数字丢了
+				   这块不是很完善
 				 */
 				xhong.event.addEventListener(inputs[i], 'keyup', function() {
 
@@ -44,7 +45,9 @@
 					}
 					if(index === 4){
 						index = 0;
-						inputs[index].focus();					}
+						 inputs[index].value="";
+						inputs[index].focus();
+					}
 				});
 			}
 		},
@@ -99,7 +102,7 @@
 		ensureClick: function() {
 			if (correct.length === 0) {
 				description.innerText = "请先点击开始~~~";
-				description.style.color = '##FFA700';
+				description.style.color = '#FFA700';
 				return;
 			}
 			num1 = xhong.$('num1').value;
@@ -134,6 +137,7 @@
 			if (a == 4) {
 				showresult.innerHTML = '<p>' + input[0] + input[1] + input[2] + input[3] + ' ' + a + 'A' + b + 'B' + '&nbsp;&nbsp;' + '恭喜您，成功了~~</p>';
 				description.innerText = "赶快点击游戏吧~~";
+				description.style.color = '#FFA700';
 				return;
 			} else {
 				var p = document.createElement("p");
