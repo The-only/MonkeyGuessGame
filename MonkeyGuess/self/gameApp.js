@@ -135,14 +135,19 @@
 				}
 			}
 			if (a == 4) {
-				showresult.innerHTML = '<p>' + input[0] + input[1] + input[2] + input[3] + ' ' + a + 'A' + b + 'B' + '&nbsp;&nbsp;' + '恭喜您，成功了~~</p>';
+				showresult.innerHTML = '<p>' + input.join("") + '  ' + a + 'A' + b + 'B' + '&nbsp;&nbsp;' + '恭喜您，成功了~~</p>';
 				description.innerText = "赶快点击游戏吧~~";
 				description.style.color = '#FFA700';
 				return;
 			} else {
 				var p = document.createElement("p");
-				p.appendChild(document.createTextNode('' + input[0] + input[1] + input[2] + input[3] + ' ' + a + 'A' + b + 'B'));
+				p.appendChild(document.createTextNode('' + input.join("") + ' ' + a + 'A' + b + 'B'));
 				showresult.insertBefore(p, showresult.firstChild);
+
+				//第二种优化方法
+				/*var SumString = '<p>'+ input.join("") + "   " + a + 'A' + b + 'B'+'</p>';
+                var arrHtml.push(SumString);
+                showresult.innerHTML = arrHtml.reverse().join("");*/
 			}
 		}
 	}
