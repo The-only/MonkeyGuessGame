@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Guess Number</title>
+	<style>
+	html,body,input{
+		padding: 0;
+		margin: 0;
+	}
+	strong{
+		font-size: 12px;
+		margin-left: -5px;
+	}
+	.container{
+		margin: 50px auto;
+		margin-left: 200px;
+		border: 2px solid blue;
+		width: 500px;
+		padding: 20px;
+	}
+	.wrapTitle{
+		display: block;
+		margin: 5px;
+	}
+	.wrapTitle span{
+		margin: 0 20px;
+		color: red;
+		display: none;
+	}
+	input{				
+		width: 30px;
+		padding: 3px;		
+		margin: 5px;
+	}	   		
+	button{
+		width: 60px;
+	}
+	.output{
+		margin:5px;
+		position: relative;
+		margin-top: 30px;
+		font-weight: 900;
+	}
+	.Result{
+		padding: 15px 0;
+	}
+	#success{
+		margin-left: 50px;
+		color: green;
+		display: none;
+	}
+	#warn{
+		margin-left: 20px;
+		color: red;
+		display: none;
+	}
+	#warnStart{
+		margin: 5px;
+		color: red;
+		display: none;
+	}
+
+	</style>
+	<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+	<div class="container">
+		<div class="wrapTitle">
+			<a href="#" id = "start">开始游戏</a>
+			<input type="checkbox" /><strong>不重复数字</strong>
+			<span id = "remind">游戏开始了~</span>
+		</div>
+		<div id="warnStart">
+			<span style="margin:5px">请先开始游戏</span><br>
+		</div>
+		<input type="text"/>
+		<input type="text"/>
+		<input type="text"/>
+		<input type="text"/>
+		<button id ="go">Go</button><span id="warn">请输入数字</span>
+		<div class="output">
+			<label for="">结果:</label><span id= "success">恭喜你成功猜中数字!游戏重新开始~</span>
+			<div id="Result"></div>
+		</div>
+	</div>
+	<script "text/javascript" src= "lib.js"></script>
+	<script "text/javascript" src= "nice.js"></script>
+</body>
+</html>
